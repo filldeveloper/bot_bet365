@@ -1,5 +1,4 @@
 from flask import Flask
-from functions import mensagem_bot_telegram
 
 app = Flask(__name__)
 

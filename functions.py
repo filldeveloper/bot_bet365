@@ -1,9 +1,10 @@
 from telegram.ext import Updater, MessageHandler, Filters
 from telegram.ext import CommandHandler
 import telegram
-import credenciais
+import os
 
-updater = Updater(token = credenciais.token_telegram, use_context=True)
+token = os.getenv('TOKEN_TELEGRAM')
+updater = Updater(token = token, use_context=True)
 dispatcher = updater.dispatcher
 
 def start(update, context):
