@@ -3,7 +3,7 @@ from telegram.ext import CommandHandler
 import telegram
 import os
 
-token = os.getenv('TOKEN_TELEGRAM')
+token = os.environ.get('TOKEN_TELEGRAM')
 updater = Updater(token = token, use_context=True)
 dispatcher = updater.dispatcher
 
